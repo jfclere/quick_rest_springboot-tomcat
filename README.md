@@ -92,7 +92,11 @@ mvn clean verify -Popenshift
 ```
 oc login https://api.dev-preview-int.openshift.com --token=MYTOKEN
 ```
-- Use the Fabric8 Maven Plugin to launch the S2I process on the OpenShift Online machine
+- Add the project
+
+oc new-project springboot-rest-s2i
+
+-Use the Fabric8 Maven Plugin to launch the S2I process on the OpenShift Online machine
 ```
 mvn clean fabric8:deploy -Popenshift -DskipTests
 ```
